@@ -1,0 +1,17 @@
+# To improve query performance, we strongly suggest adding indexes to any field that you plan to filter or sort by
+# Add the `@index` or `@index(unique: true)` annotation after any non-key field
+# https://academy.subquery.network/build/graphql.html#indexing-by-non-primary-key-field
+
+type UserEntity @entity {
+  id: ID!
+  inAmount: BigInt!
+  nonceIn: Int
+  nonceOut: Int
+  outAmount: BigInt
+}
+
+type EventEntity @entity {
+  id: ID!
+  from: String
+  to: String
+}
